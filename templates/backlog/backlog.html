@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Backlog</title>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'backlog/style.css' %}">
+</head>
+<body>
+<header>
+    <div id="header">
+        <div id="logo">
+            <span><strong>dc_desk</strong></span>
+            <span class="material-icons-outlined-header">support_agent</span>
+        </div>
+        {% for title in title_navbar %}
+            <span><strong>{{ title.capitalize }}</strong></span>
+        {% endfor %}
+        <div id="sign-header">
+            <button id="button-signin-header"><strong>Sign In</strong></button>
+            <button id="button-signup-header"><strong>Sign Up</strong></button>
+        </div>
+    </div>
+</header>
+<section>
+    <div id="searchbar">
+        <input id="input-searchbar">
+        <button id="button-searchbar">Search!</button>
+    </div>
+<table id="table">
+  <thead>
+    <tr>
+        {% for title in title_table %}
+            <th class="th">{{ title.capitalize }}</th>
+        {% endfor %}
+    </tr>
+  </thead>
+  <tbody>
+  {% for ticket in latest_ticket_list %}
+  <tr>
+    <td class="td">{{ ticket.id }}</td>
+    <td class="td">{{ ticket.status }}</td>
+    <td class="td">{{ ticket.lvl }}</td>
+    <td class="td">{{ ticket.category }}</td>
+    <td class="td">{{ ticket.tag }}</td>
+    <td class="td">{{ ticket.agent }}</td>
+    <td class="td">{{ ticket.team }}</td>
+    <td class="td">{{ ticket.last_update }}</td>
+    <td class="td">{{ ticket.last_action }}</td>
+    <td class="td">{{ ticket.user }}</td>
+    <td class="td">{{ ticket.close_at }}</td>
+  </tr>
+  {% endfor %}
+  </tbody>
+</table>
+<div id="pagination">
+  <span id="span-pagination">Items per page:</span>
+  <select id="select-pagination">
+    {% for value in value_pagination %}
+        <option>{{ value }}</option>
+    {% endfor %}
+  </select>
+  <div id="icon-pagination">
+    <span class="material-icons-outlined-pagination">skip_previous</span>
+    <span class="material-icons-outlined-pagination">skip_next</span>
+  </div>
+</div>
+</section>
+<footer>
+    <div id="footer">
+        <span>Made with 🥰 by moro2303</span>
+    </div>
+</footer>
+</body>
+</html>

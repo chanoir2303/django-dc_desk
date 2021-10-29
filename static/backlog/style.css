@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow&display=swap');
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+
+* {
+  font-family: 'Barlow', sans-serif;
+}
+
+/* Header */
+#header {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100vw;
+  height: 8vh;
+  margin: -10px -20px 20px -10px;
+  background-color: #013E63;
+  border: 1px solid #013E63;
+  color: #ffffff;
+}
+
+.material-icons-outlined-header {
+  font-family: 'Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;
+  color: #ffffff;
+}
+
+#button-signin-header, #button-signup-header {
+  width: 5vw;
+  height: 4vh;
+  border: none;
+  border-radius: 3px;
+}
+
+#button-signin-header {
+  background-color: #0295F0;
+  color: #ffffff;
+}
+
+#button-signup-header {
+  background-color: aliceblue;
+  color: #0295F0;
+}
+
+/* Searchbar */
+#searchbar {
+  margin-bottom: 2vh;
+}
+#input-searchbar {
+  width: 20vw;
+  height: 20px;
+  margin-right: -1%;
+  border: 1px solid #013E63;
+}
+
+#button-searchbar {
+  height: 24px;
+  border: none;
+  border-radius: 0px 10px 10px 0px;
+  color: white;
+  background-color: #013E63;
+  text-align: center;
+}
+
+/* Table */
+#table {
+  width: 100vw;
+  height: 550px;
+  border-collapse: collapse;
+}
+
+.th {
+  border-bottom: 2px solid #0266A3;
+}
+
+.td {
+  border-bottom: 1px solid #0295F0;
+  text-align: center;
+}
+
+/* Pagination */
+#pagination {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  width: 100vw;
+  height: 6vh;
+  border-bottom: 2px solid #013E63;
+}
+
+#span-pagination {
+  color: #013E63;
+}
+
+#select-pagination {
+  width: 3.5vw;
+  height: 3vh;
+  color: #013E63;
+}
+
+#icon-pagination {
+  margin-right: 6.5vh;
+}
+
+.material-icons-outlined-pagination {
+  font-family: 'Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;
+  color: #013E63;
+  /* Support for all WebKit browsers. */
+  -webkit-font-smoothing: antialiased;
+  /* Support for Safari and Chrome. */
+  text-rendering: optimizeLegibility;
+  /* Support for Firefox. */
+  -moz-osx-font-smoothing: grayscale;
+  /* Support for IE. */
+  font-feature-settings: 'liga';
+}
+
+/* Footer */
+#footer {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  width: 100vw;
+  height: 10vh;
+  margin: 0 -20px -20px -10px;
+  background-color: lightgrey;
+  border: 1px solid lightgrey;
+  color: #013E63;
+}
